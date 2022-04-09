@@ -33,7 +33,7 @@ export class QuestionComponent implements OnInit {
         question.all_answers = question.incorrect_answers.concat(question.correct_answer);
       }))
       
-      console.log(this.questions)
+      
       
     },
       (err: any) => {
@@ -45,7 +45,6 @@ export class QuestionComponent implements OnInit {
 
   score(questionNum:number, answer:string,){
     if(this.questions[questionNum].correct_answer === answer){
-      //this.correctAnswer = true;
       this.points +=  10;
       this.correctAnswer++;
       this.stopTimer();

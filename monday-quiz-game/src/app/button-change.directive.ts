@@ -9,7 +9,7 @@ export class ButtonChangeDirective {
   constructor(private el: ElementRef,private render : Renderer2) { }
 
   @HostListener('click') clickAnswer() {
-    console.log(this.correctAnswer);
+
     if(this.correctAnswer){
       this.render.addClass(this.el.nativeElement,'btn-outline-success');
       this.correctAnswer =false;
