@@ -1,0 +1,46 @@
+<div class="container border">
+    <div class="head">
+        <h3 class="d-flex justify-content-center">{{questions[currentQuestion]?.question}}</h3>
+    </div>
+    <div class="row mb-4">
+        
+        <div class="col-2  d-flex justify-content-center">
+            <div class="row">
+                <div>
+                  <h5> welcom {{name}} </h5> 
+                </div>
+                <div>
+                    {{points}} points 
+                </div>
+            </div>
+        </div>
+        <div class="col-8 d-flex justify-content-center">
+            <img src="../../assets/picture.jpg">
+    </div>
+        <div class="col-2">
+                <div class="row">
+                    <div class="time">
+                          <i class="bi bi-alarm">{{counter}} sec</i>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row"> 
+            <div class="col-3 mb-3" *ngFor="let answer of questions[currentQuestion]?.all_answers">
+                    <div class="d-flex justify-content-center ">
+                        <button appButtonChange [correctAnswer]="answer == questions[currentQuestion].correct_answer" (click)="score(currentQuestion,answer)" type="button" class=" btn btn-dark"
+                        >{{answer}}</button>
+                    </div>
+            </div>
+        </div>
+    
+        <!-- <div class="alert alert-success" *ngIf="correctAnswer">
+                create job 
+        </div>
+        <div class="alert alert-danger" *ngIf="!correctAnswer">
+            Wrong answer
+         </div>
+     -->
+    </div>
+</div>
