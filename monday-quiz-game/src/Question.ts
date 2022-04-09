@@ -1,4 +1,5 @@
 export interface Question {
+    all_answers: string[];
     category: string;
     type: string;
     question:string;
