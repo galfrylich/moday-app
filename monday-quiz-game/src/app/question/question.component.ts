@@ -12,7 +12,7 @@ export class QuestionComponent implements OnInit {
   name!:string;
   error: any;
   questions: Question[] =[] ;
-  public currentQuestion: number = 47;
+  public currentQuestion: number = 0;
   public points : number =0;
   public counter: number = 30;
   public timer$: any;

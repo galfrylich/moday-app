@@ -1,8 +1,9 @@
 <div class="container d-flex justify-content-center" >
         <div class="row">
-            <h1 class="col-12 d-flex justify-content-center">Greate job!</h1>
+            <h1 class="col-12 d-flex justify-content-center" *ngIf="score ==0">Ho no, all wrong answers!</h1>
+            <h1 class="col-12 d-flex justify-content-center" *ngIf="score !=0 " >Greate job!</h1>
             <div class="col-12 d-flex justify-content-center ">
-                <h3>you earn {{score}} points</h3> 
+                <h3>you earn {{score}} points </h3> 
             </div>
             <div class="row">
                 <div class="col-12 mt-5">
