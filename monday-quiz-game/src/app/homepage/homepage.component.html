@@ -1,0 +1,22 @@
+<div class="container border mt-4">
+    <div>
+        <h1 class="d-flex justify-content-center">Welcome to Monady's Quiz Game!</h1>
+        <ul>
+            <li>Each correct question grant you 10 point.</li>
+            <li>4 optional answers only one is right.</li>
+            <li>you will have 30 seconds to answer each question.</li>
+        </ul>
+        <h2 class="">Have fun!</h2>
+    </div>
+    <div class="row">
+        <div class=" input group mb-3 col-3">
+            <label for="nameInput" class="form-label">Your name</label>
+            <input #name  type="text" class="form-control" id="nameInput" >
+            
+        </div>
+    </div>
+    <div class=" input group mb-3 col-3">
+        <button   class="btn btn-primary" (click)="startQuiz(name.value)" [routerLink]="['/question']" routerLinkActive="router-link-active" >Start game</button>
+    </div>
+</div>
+
